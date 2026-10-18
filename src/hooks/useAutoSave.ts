@@ -14,7 +14,7 @@ export function useAutoSave(
   options: UseAutoSaveOptions = {}
 ) {
   const { interval = 30000, enabled = true, onSaved, onError } = options;
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isSavingRef = useRef(false);
   const [lastSavedTime, setLastSavedTime] = useState<string | null>(null);
   const [isSaving, setIsSaving] = useState(false);

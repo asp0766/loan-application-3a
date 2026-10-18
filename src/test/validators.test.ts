@@ -80,6 +80,12 @@ describe('DOB & Age Validation', () => {
     return `${year}-${month}-${day}`;
   }
 
+  it('calculates age correctly from DOB string', () => {
+    const today = new Date();
+    const dob30 = new Date(today.getFullYear() - 30, today.getMonth(), today.getDate());
+    expect(calculateAge(formatYMD(dob30))).toBe(30);
+  });
+
   it('accepts an applicant who is exactly 21 years old today (Section E3.4)', () => {
     const today = new Date();
     const exact21 = new Date(today.getFullYear() - 21, today.getMonth(), today.getDate());
