@@ -141,6 +141,4 @@ npm run preview
 
 ---
 
-## 📄 License & Intellectual Property
 
-Designed and engineered for the **ZeTheta Multi-Step Loan Application Form (Project 3A)** assessment. All rights reserved by LendSwift Financial Services Pvt Ltd (Simulated NBFC).
