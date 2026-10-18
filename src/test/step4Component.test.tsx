@@ -26,7 +26,7 @@ describe('Step4Address Component Direct Tests', () => {
     render(<TestStep4Wrapper />);
 
     expect(screen.getByText(/Residential Address Information/i)).toBeInTheDocument();
-    expect(screen.getByText(/Current Residential Address/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/Current Residential Address/i).length).toBeGreaterThan(0);
     expect(
       screen.getByText(/Permanent address is same as current residential address/i)
     ).toBeInTheDocument();

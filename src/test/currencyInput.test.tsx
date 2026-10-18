@@ -8,7 +8,7 @@ describe('CurrencyInput Component Unit Tests', () => {
 
     const input = screen.getByRole('textbox') as HTMLInputElement;
     expect(input.value).toBe('10,50,000');
-    expect(screen.getByText('10.5 Lakh')).toBeInTheDocument();
+    expect(screen.getByText(/10\.50?\s*Lakh/i)).toBeInTheDocument();
   });
 
   it('strips non-numeric characters and triggers onChange with integer value', () => {

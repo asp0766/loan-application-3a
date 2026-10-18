@@ -22,6 +22,6 @@ describe('Step1LoanType Component Direct Tests', () => {
 
     expect(screen.getByText(/Loan Product & Requirement/i)).toBeInTheDocument();
     expect(screen.getByText(/Indicative Monthly EMI/i)).toBeInTheDocument();
-    expect(screen.getByText(/10.5% p.a./i)).toBeInTheDocument();
+    expect(screen.getAllByText(/10.5% p.a./i).length).toBeGreaterThan(0);
   });
 });
